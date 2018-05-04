@@ -8,5 +8,3 @@ Prénom        Nom
 - Louis      Zaccomer
 - Kevin      Fernandes
 
-
-***
