@@ -1,4 +1,4 @@
-Nom du groupe: Noname
+Nom du application: Demoss
 
 Prénom        Nom
 
