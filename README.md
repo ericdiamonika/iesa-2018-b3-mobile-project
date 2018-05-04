@@ -1,4 +1,5 @@
-Nom de l'application: Demoss
+Nom de l'application 
+: Demoss
 
 Prénom        Nom
 
