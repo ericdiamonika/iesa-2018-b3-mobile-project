@@ -9,7 +9,7 @@ Prénom        Nom
 - Kevin      Fernandes
 
 ------------------------
-Peetch : 
+Pitch : 
 
 ARES a pour vocation principale de favoriser l’insertion de personnes en grande exclusion (SDF, jeunes sans qualification, personnes handicapées) en leur offrant un travail et un accompagnement social adaptés.
 Pour aider à leur ré-insertion ARES a pensé au développement d’une application pour les accompagner dans leurs tâches quotidiennes et faciliter leur insertion.
