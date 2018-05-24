@@ -25677,3 +25677,39 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-home .sign-in {
+  background-color: #fcc800;
+}
+
+page-home .sign-in div {
+  text-align: center;
+}
+
+page-home .sign-in img {
+  width: 40%;
+}
+
+page-login .sign-in {
+  background-color: #fcc800;
+}
+
+page-login .sign-in div {
+  text-align: center;
+}
+
+page-login .sign-in img {
+  width: 40%;
+}
+
+page-register .sign-in {
+  background-color: #fcc800;
+}
+
+page-register .sign-in div {
+  text-align: center;
+}
+
+page-register .sign-in img {
+  width: 40%;
+}
