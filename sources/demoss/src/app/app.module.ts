@@ -15,6 +15,7 @@ import { Camera } from '@ionic-native/camera';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import {CameraPage} from "../pages/camera/camera";
 
 const firebaseAuth = {
   apiKey: "AIzaSyAUc0s4FUFpYVamlGKJPYosM0aLWdNaz_M",
@@ -32,7 +33,8 @@ const firebaseAuth = {
     ListPage,
     ContactsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+      CameraPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ const firebaseAuth = {
     ListPage,
     ContactsPage,
     RegisterPage,
-    LoginPage
+    LoginPage,
+      CameraPage
   ],
   providers: [
     StatusBar,
