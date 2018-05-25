@@ -17,6 +17,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {CameraPage} from "../pages/camera/camera";
 
+import {Contacts} from "@ionic-native/contacts";
+import { CallNumber } from '@ionic-native/call-number';
+
 const firebaseAuth = {
   apiKey: "AIzaSyAUc0s4FUFpYVamlGKJPYosM0aLWdNaz_M",
     authDomain: "demoss-96939.firebaseapp.com",
@@ -55,6 +58,8 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen, Camera,
+    Contacts,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
