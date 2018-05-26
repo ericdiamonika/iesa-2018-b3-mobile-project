@@ -22,6 +22,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 
 import {Contacts} from "@ionic-native/contacts";
 import { CallNumber } from '@ionic-native/call-number';
+import {WelcomePage} from "../pages/welcome/welcome";
 
 const firebaseAuth = {
   apiKey: "AIzaSyAUc0s4FUFpYVamlGKJPYosM0aLWdNaz_M",
@@ -42,7 +43,8 @@ const firebaseAuth = {
     LoginPage,
     CameraPage,
     GoogleMapComponent,
-    GooglemapPage
+    GooglemapPage,
+    WelcomePage
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ const firebaseAuth = {
     LoginPage,
     CameraPage,
     GoogleMapComponent,
-    GooglemapPage
+    GooglemapPage,
+    WelcomePage
   ],
   providers: [
     StatusBar,

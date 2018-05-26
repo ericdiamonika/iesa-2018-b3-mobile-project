@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
-import {ContactsPage} from "../contacts/contacts";
+import {WelcomePage} from "../welcome/welcome";
 
 /**
  * Generated class for the LoginPage page.
@@ -41,7 +41,7 @@ export class LoginPage {
       .then(data => {
         console.log('y a des data', this.fire.auth.currentUser);
         this.alert('Succes logged in');
-        this.navCtrl.setRoot( ContactsPage );
+        this.navCtrl.setRoot( WelcomePage );
       })
       .catch(error => {
         console.log('y a des error', error);
