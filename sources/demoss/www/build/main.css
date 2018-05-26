@@ -25686,6 +25686,38 @@ google-map #map {
   height: 100% !important;
 }
 
+page-camera .camera {
+  background-color: #fcc800;
+}
+
+page-camera .camera div {
+  text-align: center;
+}
+
+page-camera .camera img {
+  width: 40%;
+}
+
+page-camera .camera p, page-camera .camera h4 {
+  color: #ffffff;
+}
+
+page-contacts .contact {
+  background-color: #fcc800;
+}
+
+page-contacts .contact div {
+  text-align: center;
+}
+
+page-contacts .contact img {
+  width: 40%;
+}
+
+page-contacts .contact p, page-contacts .contact h4 {
+  color: #ffffff;
+}
+
 page-home .sign-in {
   background-color: #fcc800;
 }
@@ -25719,5 +25751,17 @@ page-register .sign-in div {
 }
 
 page-register .sign-in img {
+  width: 40%;
+}
+
+page-welcome .welcome {
+  background-color: #fcc800;
+}
+
+page-welcome .welcome div {
+  text-align: center;
+}
+
+page-welcome .welcome img {
   width: 40%;
 }

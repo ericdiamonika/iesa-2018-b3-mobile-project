@@ -10,12 +10,26 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>welcome</ion-title>
+    <ion-title>Ares</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="welcome" padding>
+  <div padding>
+    <img src="../../assets/imgs/ares-logo.png">
+  </div>
 
+  <div padding>
+    <button block ion-button (click)="googleMap()">Où nous trouver</button>
+  </div>
+
+  <div padding>
+    <button block ion-button (click)="Contact()">Nous contacter</button>
+  </div>
+
+  <div padding>
+    <button block ion-button (click)="Camera()">Camera</button>
+  </div>
 </ion-content>

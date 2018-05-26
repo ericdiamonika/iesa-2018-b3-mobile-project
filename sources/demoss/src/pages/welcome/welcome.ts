@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {GooglemapPage} from "../googlemap/googlemap";
+import {ContactsPage} from "../contacts/contacts";
+import {CameraPage} from "../camera/camera";
 
 /**
  * Generated class for the WelcomePage page.
@@ -20,6 +23,17 @@ export class WelcomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+  googleMap(){
+    this.navCtrl.push(GooglemapPage);
+  }
+
+  Contact(){
+    this.navCtrl.push(ContactsPage);
+  }
+
+  Camera(){
+    this.navCtrl.push(CameraPage);
   }
 
 }

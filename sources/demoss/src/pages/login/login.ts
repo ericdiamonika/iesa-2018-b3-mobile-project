@@ -29,7 +29,7 @@ export class LoginPage {
 
   alert(message){
     this.alertCtrl.create({
-      title: 'Info!',
+      title: 'Bienvenue',
       subTitle: message,
       buttons: ['OK']
     }).present();
@@ -40,11 +40,11 @@ export class LoginPage {
     this.fire.auth.signInWithEmailAndPassword(this.username.value,this.password.value)
       .then(data => {
         console.log('y a des data', this.fire.auth.currentUser);
-        this.alert('Succes logged in');
+        this.alert('Connexion réussie');
         this.navCtrl.setRoot( WelcomePage );
       })
       .catch(error => {
-        console.log('y a des error', error);
+        console.log('essai encore !', error);
         this.alert(error.message);
       });
     console.log(this.password.value, this.username.value);

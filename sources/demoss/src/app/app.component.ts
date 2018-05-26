@@ -24,10 +24,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Welcome', component: WelcomePage },
-      { title: 'Contacts', component: ContactsPage },
+      { title: 'Accueil', component: WelcomePage },
+      { title: 'Contact', component: ContactsPage },
       { title: 'Camera', component: CameraPage },
-      { title: 'Google Map', component: GooglemapPage }
+      { title: 'Carte', component: GooglemapPage }
     ];
 
   }

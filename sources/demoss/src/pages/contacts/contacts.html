@@ -3,15 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Contact</ion-title>
+    <ion-title>Contactez-nous</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Bienvenue sur la page contact</h2>
-  <br>
-  <button ion-button large outline black (click)="openContact()">open contact</button>
-  <h2>Contacts: {{numbers|json}}</h2>
-  <button ion-button large outline black (click)="callNumberFn()">call contact</button>
+<ion-content class="contact" padding>
+  <h4>Besoin d'aide ?</h4>
+  <div padding>
+    <img src="../../assets/imgs/ares-logo.png">
+  </div>
+  <div padding>
+    <button block ion-button (click)="openContact()">Voir contact</button>
+  </div>
+  <p>Contacts: {{numbers|json}}</p>
+  <div padding>
+    <button block ion-button (click)="callNumberFn()">Appeler contact</button>
+  </div>
 </ion-content>
 java -version

@@ -16,9 +16,14 @@
 </ion-header>
 
 
-<ion-content padding>
-
-  <button ion-button (click)="takePicture()">Prendre une photo</button>
+<ion-content class="camera" padding>
+  <h4>Besoin d'aide ?</h4>
+  <div padding>
+    <img src="../../assets/imgs/ares-logo.png">
+  </div>
+  <div padding>
+    <button ion-button (click)="takePicture()">Prendre une photo</button>
+  </div>
 
   <p align="center"><img src = "{{ myphoto }}"></p>
 
