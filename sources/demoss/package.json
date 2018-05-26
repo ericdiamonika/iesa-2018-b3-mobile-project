@@ -62,8 +62,7 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-camera": {},
       "mx.ferreyra.callnumber": {},
-      "cordova-plugin-contacts": {}
-      "cordova-plugin-camera": {},
+      "cordova-plugin-contacts": {},
       "cordova-plugin-geolocation": {
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       }

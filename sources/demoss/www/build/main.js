@@ -333,12 +333,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_google_map_google_map__ = __webpack_require__(694);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_googlemap_googlemap__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_geolocation__ = __webpack_require__(132);
+throw new Error("Cannot find module \"@ionic-native/contacts\"");
+throw new Error("Cannot find module \"@ionic-native/call-number\"");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -409,6 +413,9 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_11__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_18__ionic_native_contacts__["Contacts"],
+                __WEBPACK_IMPORTED_MODULE_19__ionic_native_call_number__["CallNumber"],
                 __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_11__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_17__ionic_native_geolocation__["a" /* Geolocation */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
             ]
@@ -621,7 +628,8 @@ var GoogleMapComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(74);
+throw new Error("Cannot find module \"@ionic-native/contacts\"");
+throw new Error("Cannot find module \"@ionic-native/call-number\"");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -634,6 +642,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the ContactsPage page.
  *
@@ -641,23 +650,82 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var ContactsPage = /** @class */ (function () {
-    function ContactsPage(fire, navCtrl, navParams) {
-        this.fire = fire;
+    function ContactsPage(navCtrl, contactsService, alertCtrl, callNumber) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.email = fire.auth.currentUser.email;
+        this.contactsService = contactsService;
+        this.alertCtrl = alertCtrl;
+        this.callNumber = callNumber;
+        this.contacts = [];
     }
+    ContactsPage.prototype.findContacts = function () {
+        var _this = this;
+        var options = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_contacts__["ContactFindOptions"]();
+        options.filter = 'John';
+        options.multiple = true;
+        options.hasPhoneNumber = true;
+        var fields = ['name'];
+        this.contactsService.find(fields, options)
+            .then(function (v) { return _this.contacts = v; })
+            .catch(function (error) {
+            _this.error = error;
+            _this.alertCtrl.create({
+                title: 'ERROR',
+                subTitle: JSON.stringify(error),
+                buttons: ['OK']
+            }).present();
+        });
+    };
+    ContactsPage.prototype.createContact = function () {
+        var _this = this;
+        var contact = this.contactsService.create();
+        contact.name = new __WEBPACK_IMPORTED_MODULE_2__ionic_native_contacts__["ContactName"](null, 'Smith', 'John');
+        contact.phoneNumbers = [new __WEBPACK_IMPORTED_MODULE_2__ionic_native_contacts__["ContactField"]('mobile', '6471234567')];
+        contact.save().then(function () { return console.log('Contact saved!', contact); }, function (error) {
+            _this.error = error;
+            _this.alertCtrl.create({
+                title: 'ERROR',
+                subTitle: JSON.stringify(error),
+                buttons: ['OK']
+            }).present();
+        });
+    };
+    ContactsPage.prototype.pickContact = function () {
+        var _this = this;
+        this.contactsService.pickContact()
+            .then(function (v) { return _this.contacts = [v]; })
+            .catch(function (error) {
+            _this.error = error;
+            _this.alertCtrl.create({
+                title: 'ERROR',
+                subTitle: JSON.stringify(error),
+                buttons: ['OK']
+            }).present();
+        });
+    };
+    ContactsPage.prototype.callNumberFn = function (number) {
+        this.callNumber.callNumber(number, true)
+            .then(function (res) { return console.log('Launched dialer!', res); })
+            .catch(function (err) { return console.log('Error launching dialer', err); });
+    };
+    ContactsPage.prototype.openContact = function () {
+        var _this = this;
+        this.contactsService.pickContact()
+            .then(function (response) {
+            _this.numbers = response.phoneNumbers[0].value;
+            _this.callNumberFn(response.phoneNumbers[0].value);
+        });
+    };
     ContactsPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ContactsPage');
     };
     ContactsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contacts',template:/*ion-inline-start:"/Users/eric/Desktop/Caca/iesa-2018-b3-mobile-project/sources/demoss/src/pages/contacts/contacts.html"*/'<!--\n  Generated template for the ContactsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>contacts</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<p>Bienvenue {{email}}</p>\n</ion-content>\n'/*ion-inline-end:"/Users/eric/Desktop/Caca/iesa-2018-b3-mobile-project/sources/demoss/src/pages/contacts/contacts.html"*/,
+            selector: 'page-contacts',template:/*ion-inline-start:"/Users/eric/Desktop/Caca/iesa-2018-b3-mobile-project/sources/demoss/src/pages/contacts/contacts.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Contact</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Bienvenue sur la page contact</h2>\n  <br>\n  <button ion-button large outline black (click)="openContact()">open contact</button>\n  <h2>Contacts: {{numbers|json}}</h2>\n  <button ion-button large outline black (click)="callNumberFn()">call contact</button>\n</ion-content>\njava -version\n'/*ion-inline-end:"/Users/eric/Desktop/Caca/iesa-2018-b3-mobile-project/sources/demoss/src/pages/contacts/contacts.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_contacts__["Contacts"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_contacts__["Contacts"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__["CallNumber"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__["CallNumber"]) === "function" && _d || Object])
     ], ContactsPage);
     return ContactsPage;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=contacts.js.map
