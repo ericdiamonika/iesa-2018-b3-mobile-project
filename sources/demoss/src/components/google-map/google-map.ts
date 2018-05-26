@@ -8,7 +8,7 @@ import { Geolocation } from '@ionic-native/geolocation';
   templateUrl: 'google-map.html'
 })
 export class GoogleMapComponent {
-
+  map:any;
   @ViewChild("map") mapElement: ElementRef;
   constructor(public navCtrl: NavController,public geolocation: Geolocation) {
 
@@ -22,16 +22,16 @@ export class GoogleMapComponent {
 
     this.geolocation.getCurrentPosition().then((position) => {
 
-      const latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      const mapOptions = {
+      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      let mapOptions = {
 
         center: latLng,
         zoom: 15,
+        streetViewControl:false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 
-      const map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-  /*    setTimeout(() =>{ this.addMarker()}, 200);*/
+       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
     },(err) => {
       console.log(err);
     });
