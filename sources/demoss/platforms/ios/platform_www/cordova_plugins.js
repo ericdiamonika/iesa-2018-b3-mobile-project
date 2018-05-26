@@ -65,35 +65,104 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.Coordinates",
-    "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
-    "pluginId": "cordova-plugin-geolocation",
+    "id": "mx.ferreyra.callnumber.CallNumber",
+    "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
+    "pluginId": "mx.ferreyra.callnumber",
     "clobbers": [
-      "Coordinates"
+      "call"
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.PositionError",
-    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
-    "pluginId": "cordova-plugin-geolocation",
+    "id": "cordova-plugin-contacts.contacts",
+    "file": "plugins/cordova-plugin-contacts/www/contacts.js",
+    "pluginId": "cordova-plugin-contacts",
     "clobbers": [
-      "PositionError"
+      "navigator.contacts"
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.Position",
-    "file": "plugins/cordova-plugin-geolocation/www/Position.js",
-    "pluginId": "cordova-plugin-geolocation",
+    "id": "cordova-plugin-contacts.Contact",
+    "file": "plugins/cordova-plugin-contacts/www/Contact.js",
+    "pluginId": "cordova-plugin-contacts",
     "clobbers": [
-      "Position"
+      "Contact"
     ]
   },
   {
-    "id": "cordova-plugin-geolocation.geolocation",
-    "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
-    "pluginId": "cordova-plugin-geolocation",
+    "id": "cordova-plugin-contacts.convertUtils",
+    "file": "plugins/cordova-plugin-contacts/www/convertUtils.js",
+    "pluginId": "cordova-plugin-contacts"
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactAddress",
+    "file": "plugins/cordova-plugin-contacts/www/ContactAddress.js",
+    "pluginId": "cordova-plugin-contacts",
     "clobbers": [
-      "navigator.geolocation"
+      "ContactAddress"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactError",
+    "file": "plugins/cordova-plugin-contacts/www/ContactError.js",
+    "pluginId": "cordova-plugin-contacts",
+    "clobbers": [
+      "ContactError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactField",
+    "file": "plugins/cordova-plugin-contacts/www/ContactField.js",
+    "pluginId": "cordova-plugin-contacts",
+    "clobbers": [
+      "ContactField"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactFindOptions",
+    "file": "plugins/cordova-plugin-contacts/www/ContactFindOptions.js",
+    "pluginId": "cordova-plugin-contacts",
+    "clobbers": [
+      "ContactFindOptions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactName",
+    "file": "plugins/cordova-plugin-contacts/www/ContactName.js",
+    "pluginId": "cordova-plugin-contacts",
+    "clobbers": [
+      "ContactName"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactOrganization",
+    "file": "plugins/cordova-plugin-contacts/www/ContactOrganization.js",
+    "pluginId": "cordova-plugin-contacts",
+    "clobbers": [
+      "ContactOrganization"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.ContactFieldType",
+    "file": "plugins/cordova-plugin-contacts/www/ContactFieldType.js",
+    "pluginId": "cordova-plugin-contacts",
+    "merges": [
+      ""
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.contacts-ios",
+    "file": "plugins/cordova-plugin-contacts/www/ios/contacts.js",
+    "pluginId": "cordova-plugin-contacts",
+    "merges": [
+      "navigator.contacts"
+    ]
+  },
+  {
+    "id": "cordova-plugin-contacts.Contact-iOS",
+    "file": "plugins/cordova-plugin-contacts/www/ios/Contact.js",
+    "pluginId": "cordova-plugin-contacts",
+    "merges": [
+      "Contact"
     ]
   }
 ];
@@ -106,7 +175,8 @@ module.exports.metadata =
   "cordova-plugin-ionic-webview": "1.1.19",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-geolocation": "4.0.1"
+  "mx.ferreyra.callnumber": "0.0.2",
+  "cordova-plugin-contacts": "3.0.1"
 };
 // BOTTOM OF METADATA
 });

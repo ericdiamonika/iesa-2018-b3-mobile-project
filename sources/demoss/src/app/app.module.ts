@@ -20,6 +20,9 @@ import {GoogleMapComponent} from "../components/google-map/google-map";
 import { GooglemapPage} from "../pages/googlemap/googlemap";
 import { Geolocation } from '@ionic-native/geolocation';
 
+import {Contacts} from "@ionic-native/contacts";
+import { CallNumber } from '@ionic-native/call-number';
+
 const firebaseAuth = {
   apiKey: "AIzaSyAUc0s4FUFpYVamlGKJPYosM0aLWdNaz_M",
     authDomain: "demoss-96939.firebaseapp.com",
@@ -61,6 +64,9 @@ const firebaseAuth = {
   ],
   providers: [
     StatusBar,
+    SplashScreen, Camera,
+    Contacts,
+    CallNumber,
     SplashScreen, Camera,Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
