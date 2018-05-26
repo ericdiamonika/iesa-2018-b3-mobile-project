@@ -16,6 +16,9 @@ import { Camera } from '@ionic-native/camera';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {CameraPage} from "../pages/camera/camera";
+import {GoogleMapComponent} from "../components/google-map/google-map";
+import { GooglemapPage} from "../pages/googlemap/googlemap";
+import { Geolocation } from '@ionic-native/geolocation';
 
 const firebaseAuth = {
   apiKey: "AIzaSyAUc0s4FUFpYVamlGKJPYosM0aLWdNaz_M",
@@ -34,7 +37,9 @@ const firebaseAuth = {
     ContactsPage,
     RegisterPage,
     LoginPage,
-      CameraPage
+    CameraPage,
+    GoogleMapComponent,
+    GooglemapPage
   ],
   imports: [
     BrowserModule,
@@ -50,11 +55,13 @@ const firebaseAuth = {
     ContactsPage,
     RegisterPage,
     LoginPage,
-      CameraPage
+    CameraPage,
+    GoogleMapComponent,
+    GooglemapPage
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera,
+    SplashScreen, Camera,Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

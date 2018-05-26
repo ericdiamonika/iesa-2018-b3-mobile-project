@@ -2,11 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import {ContactsPage} from "../pages/contacts/contacts";
 import {CameraPage} from "../pages/camera/camera";
+import {GooglemapPage} from "../pages/googlemap/googlemap";
 
 
 @Component({
@@ -25,9 +24,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'Contacts', component: ContactsPage },
-      { title: 'Camera', component: CameraPage }
+      { title: 'Camera', component: CameraPage },
+      { title: 'Google Map', component: GooglemapPage }
     ];
 
   }

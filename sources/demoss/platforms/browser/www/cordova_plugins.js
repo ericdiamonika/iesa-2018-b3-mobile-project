@@ -67,7 +67,8 @@ module.exports.metadata =
     "cordova-plugin-ionic-keyboard": "2.0.5",
     "cordova-plugin-ionic-webview": "1.1.19",
     "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-whitelist": "1.3.3"
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-geolocation": "4.0.1"
 }
 // BOTTOM OF METADATA
 });

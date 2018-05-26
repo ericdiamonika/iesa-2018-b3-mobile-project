@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from "angularfire2/auth";
-import {ListPage} from "../list/list";
 import {ContactsPage} from "../contacts/contacts";
 
 /**

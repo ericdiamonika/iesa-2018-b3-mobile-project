@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		0C78B8174CE54516BE3639CC /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9946145D06A41FC89BE65F5 /* GCDWebServerMultiPartFormRequest.m */; };
@@ -42,6 +41,7 @@
 		ED85612305BC43C4A9F5F5AB /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DCC23951B84050AEE3C599 /* UIImage+CropScaleOrientation.m */; };
 		F28A40DF8FE442C69A73623D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B389644ED0CD4E63AC35DA8D /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F62882CDF9C94C13AF9CCCDB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB071A864EC1456993FBAF15 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		19F14CF53199404B8E8F6BDD /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C8C920D4BC4DBABDDCF6C1 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +143,8 @@
 		F9835045DA794FA982FE81B8 /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataResponse.m; path = "cordova-plugin-ionic-webview/GCDWebServerDataResponse.m"; sourceTree = "<group>"; };
 		F9946145D06A41FC89BE65F5 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = "cordova-plugin-ionic-webview/GCDWebServerMultiPartFormRequest.m"; sourceTree = "<group>"; };
 		FAC376FC0AF1460C854670F5 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
+		50C8C920D4BC4DBABDDCF6C1 /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0EFCBC5225834A43A9B84826 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,8 @@
 				9FC7BCA103714CADA0AB8E87 /* CDVViewController+SplashScreen.m */,
 				FAC376FC0AF1460C854670F5 /* CDVSplashScreen.h */,
 				4BE636CB7F574199BFFCBD8D /* CDVViewController+SplashScreen.h */,
+				50C8C920D4BC4DBABDDCF6C1 /* CDVLocation.m */,
+				0EFCBC5225834A43A9B84826 /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = demoss/Plugins;
@@ -456,6 +460,7 @@
 				53F772118B864A368BBFC35E /* GCDWebServerStreamedResponse.m in Sources */,
 				2710B4A554D64166B95644FF /* CDVSplashScreen.m in Sources */,
 				5763F35B7E3D48148D1B7DE3 /* CDVViewController+SplashScreen.m in Sources */,
+				19F14CF53199404B8E8F6BDD /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
