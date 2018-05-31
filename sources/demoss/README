@@ -1,0 +1,6 @@
+-faites un clone du projet : "git clone https://github.com/ericdiamonika/iesa-2018-b3-mobile-project/tree/master/sources/demoss"
+-installez l'application Xcode pour effectuer la simulation de projet
+-aller dans le projet en faisant : "cd " et le chemin de votre repertoire (ex: "cd /Users/Desktopdossier_projet/demoss" )
+ faites un "npm install -g ionic" ("sudo npm install -g ionic" sur mac) pour installer ionic
+-Lancez l'emulation avec la commande "ionic cordova emulate"
+ choisiez la platforme (ios ou android )
